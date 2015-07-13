@@ -7,11 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="flash">
-    <%= flash.notice %>
-  </p>
- 
-
+  <p class="flash"><%= flash.notice %></p>
+  <div id="container">
+    <div id="content">
       <%= yield %>
       <hr>
       <h6>
@@ -23,7 +21,8 @@
           <%= link_to "(login)", login_path %>
         <% end %>
       </h6>
-  
+    </div>
+  </div>
   
 </body>
 </html>
